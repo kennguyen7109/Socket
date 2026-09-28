@@ -1,0 +1,17 @@
+TỔNG HỢP CẢI TIẾN PYTHON SOCKET CLIENT
+
+1. Nhận tin nhắn (receive_forever):
+   - Thay vòng lặp while True + readline() bằng for raw in reader:.
+   - Lợi ích: Code ngắn hơn, tự động dừng khi đóng kết nối mà không cần kiểm tra dữ liệu rỗng thủ công.
+
+2. Gửi tin nhắn (send):
+   - Sử dụng any() để kiểm tra ký tự xuống dòng và f-string f"{text}\n".
+   - Lợi ích: Cú pháp chuẩn Python, gọn gàng và dễ đọc hơn.
+
+3. Đọc tin nhắn (read_messages):
+   - Thay khối try-except queue.Empty bằng vòng lặp while not inbox.empty():.
+   - Lợi ích: Trực quan, loại bỏ việc bắt ngoại lệ không cần thiết.
+
+4. Cấu trúc mã nguồn:
+   - Gom gọn các biến toàn cục (như history) và sắp xếp lại thứ tự logic từ khởi tạo, xử lý đến hiển thị.
+   - Lợi ích: Luồng chạy rõ ràng, dễ bảo trì và mở rộng.
